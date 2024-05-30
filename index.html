@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+        canvas {
+            border: 2px solid #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        .overlay {
+            position: absolute;
+            top: 10px;
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% - 20px);
+            color: #fff;
+            font-size: 36px; /* Tamaño aumentado */
+        }
+        #score {
+            right: 10px;
+        }
+        #timer {
+            left: 10px;
+        }
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .button {
+            background-color: #fff;
+            color: #000;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div id="timer">Time: 0</div>
+        <div id="score">Score: 0</div>
+    </div>
+    <canvas id="Cam"></canvas>
+    <div id="controls">
+        <button class="button" id="left">Left</button>
+        <button class="button" id="up">Up</button>
+        <button class="button" id="right">Right</button>
+        <button class="button" id="down">Down</button>
+    </div>
+    <script src="snake.js"></script>
+</body>
+</html>
